@@ -29,7 +29,7 @@ const people = [
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's and return the filtered array
 export function myfilter() {
-let ans  = inventors.filter((x) => ( x.year<=1500) );
+let ans  = inventors.filter((x) => ( x.year>1500 && x.year<=1599) );
 	return ans;
 }
 
@@ -65,14 +65,15 @@ export function reduce() {
 
 // 5. Sort the inventors by years lived and return the sorted array
 export function sortbylived() {
-
+let ans3 = inventors.sort(function(a, b) { return (a.passed - a.year)-(b.passed - b.year)});
+	return ans3;
 }
 
 // 6. sort Exercise
 // Sort the people alphabetically by last name and return the sorted array
 export function sortByLastName() {
-let ans3 = inventors.sort(function(a, b) { return (a.passed - a.year)-(b.passed - b.year)});
-	return ans3;
+let let ans4 = inventors.sort(function(a, b) {return  a.last > b.last ? 1 : -1});
+	return ans4;
 }
 
 // 7. Reduce Exercise
