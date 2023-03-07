@@ -72,7 +72,7 @@ let ans3 = inventors.sort(function(a, b) { return (a.passed - a.year)-(b.passed 
 // 6. sort Exercise
 // Sort the people alphabetically by last name and return the sorted array
 export function sortByLastName() {
-let let ans4 = inventors.sort(function(a, b) {return  a.last > b.last ? 1 : -1});
+let let ans4 = inventors.sort(function(a, b) {return  a.last > b.last});
 	return ans4;
 }
 
